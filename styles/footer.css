@@ -1,0 +1,162 @@
+.element-three{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 120vh;
+    width: 100%;
+    color: var(--color-text);
+    width: 100%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+footer{
+    position: absolute;
+    z-index: 1;
+    height: 45vh;
+    width: 100%;
+    background-color: var(--color-main);
+    color: var(--color-text);
+}
+
+.foot{
+    display: flex;
+}
+
+.foot ul{
+    font-family: var(--font-sub);
+    list-style: none;
+    margin: 1rem 0 0 7rem;
+    padding: 0.5rem 0;
+}
+
+.foot-one h3{
+    font-family: var(--font-main);
+    font-size: 2rem;
+}
+
+.foot-one li{
+    padding: 0.3rem 0;
+}
+
+.foot-one a{
+    color: var(--color-accent);
+}
+
+.apps{
+    display: flex;
+    flex-direction: column;
+    margin: 1.7rem 0 0 7rem;
+}
+
+.apps h3{
+    font-family: var(--font-main);
+    font-size: 2rem;
+}
+
+.apps a{
+    padding: 0.3rem 0;
+}
+
+.socials{
+    margin: 1.7rem 0 0 7rem;
+}
+.socials h3{
+    font-family: var(--font-main);
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+.socials a{
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.03rem 0;
+    margin: 0 0 0 1rem;
+}
+
+.socials a:hover{
+    color: var(--color-accent);
+}
+
+footer p{
+    font-size: 1.7rem;
+    margin: 1.5rem 0 0 7rem;
+}
+
+/* media-queries */
+
+@media screen  and (min-width:768px) and (max-width:1023px) {
+    footer{
+        height: 35vh;
+    }
+    .foot{
+        margin: 0;
+    }
+
+    .foot ul{
+        margin-left: 3%;
+    }
+
+    .foot-one li{
+        margin-top: 1rem;
+    }
+
+    .apps{
+        margin-left: 4%;
+    }
+
+    .apps a{
+        margin: 1rem 0;
+    }
+
+    .socials{
+        margin-left: 5%;
+    }
+
+    footer p{
+        margin-top: 10%;
+        margin-left: 3%;
+    }
+}
+@media screen and (min-width:180px) and (max-width:767px) {
+    footer{
+        height: 70vh;
+    }
+    .foot{
+        display: flex;
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .foot ul{
+        margin-left: 5%;
+    }
+
+    .apps{
+        margin-left: 5%;
+    }
+
+    .apps h3{
+        margin-bottom: 1rem;
+    }
+
+    .socials{
+        margin-left: 0;
+    }
+
+    .socials h3{
+        text-align: left;
+        margin-left: 5%;
+        margin-bottom: 1rem;
+    }
+
+    .socials a{
+        justify-content: flex-start;
+    }
+
+    footer p{
+        font-size: 1rem;
+        margin-left: 0;
+        margin-top: 2%;
+    }
+}

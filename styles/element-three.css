@@ -1,0 +1,139 @@
+.element-two{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 120vh;
+    width: 100%;
+    color: var(--color-text);
+    width: 100%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.element-three{
+    /* position: absolute; */
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    color: var(--color-text);
+    z-index: -999;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    overflow: hidden;
+}
+
+.element-three .container{
+    width: 100%;
+    position: relative;
+    text-align: center;
+    margin-top: 9rem;
+}
+
+.element-three .container h1{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+}
+
+.element-three .container p{
+    font-family: var(--font-sub);
+    font-size: 1.7rem;
+}
+
+.bg3{
+    background: radial-gradient(
+        circle, rgba(11,26,115,0.3757878151260504) 0%,
+        rgba(65,11,115,0.5326505602240896) 35%,
+        rgba(3,0,21,0.6306897759103641) 100%),
+        url(../images/boy-girl-future.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+.slider{
+    position: absolute;
+    z-index: -10;
+    display: grid;
+    place-items: center;
+    margin-top: 25rem;
+}
+
+.slider::before,
+.slider::after{
+    content: '';
+    height: 100%;
+    width: 15%;
+    z-index: 2;
+}
+
+.slider::before{
+    left: 0;
+    top: 0;
+}
+.slider::after{
+    right: 0;
+    top: 0;
+    transform: rotateZ(180deg);
+}
+
+
+.slide-track{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    width: calc(15rem * 16);
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(calc(-15rem * 8));
+    }
+}
+
+.slide{
+    height: 20rem;
+    width: 15rem ;
+    margin: 0 0 0 1rem;
+    align-items: center;
+}
+
+.slide img{
+    height: 100%;
+    width: 100%;
+    transition: transform 2s;
+}
+
+
+/* media-queries */
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .element-three .container{
+        text-align: center;
+        margin-top: 40%;
+    }
+
+    .slider{
+        margin-top: 110%;
+    }
+}
+@media screen and (min-width:180px) and (max-width:767px) {
+    .element-two{
+        width: 100%;
+        height: 120vh;
+    }
+
+    .element-three .container h1{
+        font-size: 2rem;
+    }
+    .element-three .container p{
+        font-size: 1.4rem;
+    }
+    .slider{
+        margin-top: 160%;
+    }
+}

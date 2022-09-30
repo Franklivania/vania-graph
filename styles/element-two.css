@@ -1,0 +1,268 @@
+.element-one{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    width: 100%;
+    color: var(--color-text);
+    width: 100%;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+}
+
+.element-two{
+    height: 100vh;
+    width: 100%;
+    margin: 0;
+    color: var(--color-text);
+    z-index: -99;
+}
+
+.element-two .container{
+    position: relative;
+    width: 100%;
+    z-index: 1;
+    font-family: var(--font-main);
+    text-align: center;
+}
+
+.element-two .container h1{
+    font-size: 5rem;
+    margin-bottom: 1rem;
+    margin-top: 10rem;
+    background: linear-gradient(
+        to right bottom,
+        rgba(var(--color-main-glitch)),
+        rgba(var(--color-sub-glitch)),
+        rgba(var(--color-accent-glitch)),
+        rgba(var(--color-grind-glitch)),
+        rgba(var(--color-text-glitch))
+    );
+    background-size: 400%;
+    -webkit-text-fill-color: transparent;
+    -webkit-background-clip: text;
+    background-clip: text;
+    animation: animate 40s linear infinite;
+}
+
+@keyframes animate {
+    0%{ background-position: 0%; }
+    100%{ background-position: 400%; }
+}
+
+.element-two .container p{
+    font-size: 1.7rem;
+    font-weight: 800;
+    font-family: var(--font-sub);
+}
+
+.bg2{
+    background: radial-gradient(
+        circle, rgba(11,26,115,0.3757878151260504) 0%,
+        rgba(65,11,115,0.5326505602240896) 35%,
+        rgba(3,0,21,0.6306897759103641) 100%),
+        url(../images/future-woman.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+.element-two .right-img{
+    height: 25rem;
+    width: auto;
+    position: absolute;
+    background-color: var(--color-text);
+    z-index: -99;
+    align-items: center;
+    background: linear-gradient(
+        to bottom right,
+        rgba(var(--color-sub-glitch),1),
+        rgba(var(--color-main-glitch),1)
+    );
+    --mask: 
+      linear-gradient(#000 0 0) 50%/calc(100% - 0.93rem) calc(100% - 0.93rem) no-repeat,
+      radial-gradient(farthest-side,#000 98%,#0000) 0 0/1rem 1rem round;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+    z-index: -1;
+    margin: 19rem 0 0 11%;
+    opacity: 0.6;
+}
+
+.right-img img{
+    height: 100%;
+    width: auto;
+    margin: 2rem;
+}
+
+.element-two .center-img{
+    height: 20rem;
+    width: auto;
+    position: absolute;
+    background: linear-gradient(
+        to right,
+        rgba(var(--color-main-glitch),1),
+        rgba(var(--color-accent-glitch),1)
+    );
+    --mask: 
+      linear-gradient(#000 0 0) 50%/calc(100% - 0.93rem) calc(100% - 0.93rem) no-repeat,
+      radial-gradient(farthest-side,#000 98%,#0000) 0 0/1rem 1rem round;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+    z-index: -1;
+    margin: 29rem 0 0 40%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.center-img img{
+    height: 100%;
+    width: auto;
+    margin: 2rem;
+}
+
+.element-two .left-img{
+    height: 23rem;
+    width: auto;
+    position: absolute;
+    background: linear-gradient(
+        to bottom right,
+        rgba(var(--color-accent-glitch),1),
+        rgba(var(--color-grind-glitch),1)
+    );
+    --mask: 
+      linear-gradient(#000 0 0) 50%/calc(100% - 0.93rem) calc(100% - 0.93rem) no-repeat,
+      radial-gradient(farthest-side,#000 98%,#0000) 0 0/1rem 1rem round;
+    -webkit-mask: var(--mask);
+            mask: var(--mask);
+    z-index: -1;
+    margin: 15rem 0 0 59%;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.6;
+}
+
+.left-img img{
+    height: 100%;
+    width: auto;
+    margin: 2rem;
+}
+
+/* media-queries */
+
+@media screen and (min-width:768px) and (max-width:1023px) {
+    .element-one{
+        width: 100%;
+        height: 110vh;
+    }
+
+    .element-two{
+        width: 100%;
+    }
+
+    .element-two .container{
+        text-align: center;
+    }
+
+    .element-two .right-img{
+        height: 27rem;
+        width: 15rem;
+        margin-left: 5%;
+        margin-top: 60%;
+    }
+    .right-img img{
+        height: 100%;
+        width: 100%;
+        margin: 2rem;
+    }
+    .element-two .center-img{
+        height: 27rem;
+        width: 15rem;
+        margin-left: 35%;
+        margin-top: 90%;
+    }
+    .center-img img{
+        height: 100%;
+        width: 100%;
+        margin: 2rem;
+    }
+    .element-two .left-img{
+        height: 27rem;
+        width: 15rem;
+        margin-left: 60%;
+        margin-top: 60%;
+    }
+    .left-img img{
+        height: 100%;
+        width: 100%;
+        margin: 2rem;
+    }
+
+}
+@media screen and (min-width:180px) and (max-width:767px) {
+    .element-one{
+        width: 100%;
+        height: 100vh;
+    }
+
+    .element-two{
+        width: 100%;
+    }
+
+    .bg2{
+        width: 100%;
+    }
+
+    .element-two .container{
+        text-align: center;
+    }
+    .element-two .container h1{
+        font-size: 3rem;
+    }
+    .element-two .container p{
+        font-size: 1.3rem;
+    }
+
+    .element-two .right-img{
+        height: 15rem;
+        width: 9rem;
+        margin-left: 5%;
+        margin-top: 90%;
+        display: grid;
+        place-items: center;
+    }
+    .right-img img{
+        height: 100%;
+        width: 100%;
+        margin: 0.5rem;
+    }
+    .element-two .center-img{
+        height: 15rem;
+        width: 9rem;
+        margin-left: 35%;
+        margin-top: 110%;
+        display: grid;
+        place-items: center;
+    }
+    .center-img img{
+        height: 100%;
+        width: 100%;
+        margin: 0.5rem;
+    }
+    .element-two .left-img{
+        height: 15rem;
+        width: 9rem;
+        margin-left: 60%;
+        margin-top: 70%;
+        display: grid;
+        place-items: center;
+    }
+    .left-img img{
+        height: 100%;
+        width: 100%;
+        margin: 0.5rem;
+    }
+}

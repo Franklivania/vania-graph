@@ -1,0 +1,37 @@
+@import url('http://fonts.cdnfonts.com/css/signika');
+@import url('http://fonts.cdnfonts.com/css/alef');
+
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: -webkit-border-box;
+    box-sizing: border-box;
+}
+
+:root{
+    --color-main: #030015;
+    --color-sub: #410B73;
+    --color-accent: #AB0694;
+    --color-grind: #0B1A73;
+    --color-text: #D8CBC7;
+
+    --color-main-glitch: 3, 0, 21;
+    --color-sub-glitch: 65, 11, 115;
+    --color-accent-glitch: 171, 6, 148;
+    --color-grind-glitch: 11, 26, 115;
+    --color-text-glitch: 216, 203, 199;
+
+    --font-main: 'Signika', sans-serif;
+    --font-sub: 'Alef', sans-serif;
+}
+
+body{
+    font-family: var(--font-main);
+    scroll-behavior: smooth;
+}
+
+.root{
+    scroll-behavior: smooth;
+}
